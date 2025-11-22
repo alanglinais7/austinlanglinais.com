@@ -1,6 +1,5 @@
 import { cache } from "react";
 import Note from "@/components/note";
-import { createClient as createServerClient } from "@/utils/supabase/server";
 import { createClient as createBrowserClient } from "@/utils/supabase/client";
 import { redirect } from "next/navigation";
 import { Metadata } from "next";
@@ -11,7 +10,7 @@ export const revalidate = 86400; // 24 hours
 
 // Cached function to fetch a note by slug - eliminates duplicate fetches
 const getNote = cache(async (slug: string) => {
-  const supabase = createServerClient();
+  const supabase = createBrowserClient();
   const { data: note } = await supabase.rpc("select_note", {
     note_slug_arg: slug,
   }).single() as { data: NoteType | null };
