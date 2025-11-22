@@ -20,6 +20,11 @@ const getNote = cache(async (slug: string) => {
 
 // Dynamically determine if this is a user note
 export async function generateStaticParams() {
+  // Skip static generation if env vars are missing (e.g., during Vercel build without env vars)
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return [];
+  }
+
   const supabase = createBrowserClient();
   const { data: posts } = await supabase
     .from("notes")
