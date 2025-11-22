@@ -62,7 +62,7 @@ or redeploy on vercel to refresh all pages.
 
 ## clone the repo
 
-`git clone https://github.com/alanagoyal/alanagoyal`
+`git clone https://github.com/alanglinais7/austinlanglinais.com`
 
 ## set up the database
 
@@ -71,7 +71,7 @@ this project uses [supabase](https://supabase.com) as a backend. to set up the d
 1. create a [new project](https://database.new) and enter your project details
 2. wait for the database to launch
 3. navigate to the sql editor in the dashboard
-4. paste the sql from the [migration file](https://github.com/alanagoyal/alanagoyal/blob/main/supabase/migrations) into the sql editor and press run
+4. paste the sql from the [migration file](https://github.com/alanglinais7/austinlanglinais.com) into the sql editor and press run
 
 alternatively, use the supabase cli to run migrations locally:
 ```bash
