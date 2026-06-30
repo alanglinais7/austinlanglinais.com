@@ -286,7 +286,7 @@ export default function PaceCalculator() {
             ).
             <form method="POST" onSubmit={(e) => e.preventDefault()}>
               <table
-                cellSpacing={1}
+                cellSpacing={0}
                 cellPadding={4}
                 border={0}
                 align="center"
