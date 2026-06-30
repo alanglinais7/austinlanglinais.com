@@ -24,6 +24,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             url: `${process.env.NEXT_PUBLIC_SITE_URL}/notes`,
             lastModified: new Date(),
         },
+        {
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/pace`,
+            lastModified: new Date(),
+        },
         ...notesUrls
     ]
 }

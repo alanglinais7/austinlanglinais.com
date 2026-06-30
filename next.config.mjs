@@ -24,7 +24,7 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/:path((?!notes|api|messages|_next|static|public|favicon\\.ico|sitemap\\.xml|robots\\.txt).*)',
+        source: '/:path((?!notes|pace|api|messages|_next|static|public|favicon\\.ico|sitemap\\.xml|robots\\.txt).*)',
         destination: '/notes/:path',
         permanent: true,
       },
